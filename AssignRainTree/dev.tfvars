@@ -1,0 +1,15 @@
+region = "us-east-1"
+backend_ecr_repo_url = "123456789012.dkr.ecr.us-east-1.amazonaws.com/dev-backend-repo"
+backend_task_execution_role_arn = "arn:aws:iam::123456789012:role/dev-backend-task-execution-role"
+backend_cpu = 256
+backend_memory = 512
+private_subnet_ids = ["subnet-xxxxxx", "subnet-yyyyyy"]
+backend_alb_sg_id = "sg-xxxxxx"
+frontend_bucket_name = "dev-frontend-bucket"
+file_storage_bucket_name = "dev-file-storage-bucket"
+db_username = "db_user"
+db_password = "db_password"
+db_backup_retention_period = 7
+kms_key_id = "arn:aws:kms:us-east-1:123456789012:key/abcd-efgh-ijkl-mnop"
+ssl_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/abcd-efgh-ijkl-mnop"
+acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/abcd-efgh-ijkl-mnop"
