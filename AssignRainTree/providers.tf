@@ -1,8 +1,11 @@
-terraform {
-  required_version = ">= 1.4.0"
+# AWS provider for dev environment
+provider "aws" {
+  alias  = "dev"
+  region = "us-east-1"
 }
 
+# AWS provider for prod environment
 provider "aws" {
-  region = "us-east-1"
-  version = ">= 2.0"  
+  alias  = "prod"
+  region = "us-west-2"
 }
