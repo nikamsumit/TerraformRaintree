@@ -1,38 +1,31 @@
 variable "backend_desired_count" {
-  description = "count of backend ECS tasks"
-  type        = number
-  default     = 1
+  description = "The desired number of tasks for the backend service."
 }
 
 variable "backend_cpu" {
-  description = "The CPU units for the backend ECS task"
-  type        = string
-  default     = "256"
+  description = "The number of CPU units to reserve for the backend service."
 }
 
 variable "backend_memory" {
-  description = "The memory for the backend ECS task"
-  type        = string
-  default     = "512"
-}
-
-variable "private_subnet_ids" {
-  description = "List of private subnet IDs where the ALB and ECS tasks will be deployed"
-  type        = list(string)
-  default     = []
+  description = "The amount of memory to allocate for the backend service (in MiB)."
 }
 
 variable "vpc_id" {
-  description = "ID of the VPC where the ALB and ECS tasks will be deployed"
-  type        = string
+  description = "The ID of the VPC where resources will be created."
+}
+
+variable "backend_cluster_id" {
+  type = string
+}
+
+variable "private_subnet_ids" {
+  description = "List of private subnet IDs in the selected VPC."
 }
 
 variable "db_username" {
-  description = "RDS database username"
-  type        = string
+  description = "Username for the RDS database."
 }
 
 variable "db_password" {
-  description = "RDS database password"
-  type        = string
+  description = "Password for the RDS database."
 }
